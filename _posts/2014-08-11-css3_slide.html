@@ -6,4 +6,57 @@ title: 利用Css3做焦点图动画
 
 <p>我的第一篇文章</p>
 
+<style>
+@-webkit-keyframes slide-in-right {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(0); }
+}
+@-webkit-keyframes slide-out-left {
+    from { -webkit-transform: translateX(0); }
+    to { -webkit-transform: translateX(-100%); }
+}
+.out, .in {
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 350ms;
+}
+.out {
+    -webkit-transform: translateX(-100%);
+    -webkit-animation-name: slide-out-left;
+}
+.in {
+    -webkit-transform: translateX(0);
+    -webkit-animation-name: slide-in-right;
+}
+.box{width:500px;height:370px;position:relative;overflow:hidden;}
+a{position:absolute;}
+</style>
+
+<div id="box" class="box">
+    <a href="/" class="out"><img src="http://dummyimage.com/500x370/ccc/f00" /></a>
+    <a href="/" class="out"><img src="http://dummyimage.com/500x370/ccc/0f0" /></a>
+    <a href="/" class="out"><img src="http://dummyimage.com/500x370/ccc/00f" /></a>
+    <a href="/" class="out"><img src="http://dummyimage.com/500x370/ccc/ff0" /></a>
+</div>
+
+<script type="text/javascript">
+var a=box.getElementsByTagName('a');
+var num=-1;
+function nextCard(m){
+    for(var i=0;i<4;i++){
+        a[i].className='out';
+    }
+    a[m].className='in';
+}
+box.onclick=function(){
+    num++;
+    if(num>=4){
+        num=0;
+    }
+    nextCard(num);
+    return false;
+}
+box.click();
+</script>
+
+
 <p>{{ page.date | date_to_string }}</p>
