@@ -13,7 +13,9 @@ title: 利用Css3做焦点图动画
 
 <h2>{{ page.title }}</h2>
 
-<p>在chrome浏览器下(或其他webkit核心浏览器)查看此页面，点击下方占位图，可以看到图片的切换效果：</p>
+<p>在chrome浏览器下(或其他webkit核心浏览器)查看本页面，</p>
+<p>直接点击下方占位图，或者点击占位图上方“翻页”二字，可以看到图片的切换效果：</p>
+<p>==============================================&gt;<a href="javascript:;" title="" id="bt">翻页</a></p>
 
 <style>
 @-webkit-keyframes slide-in-right {
@@ -36,15 +38,15 @@ title: 利用Css3做焦点图动画
     -webkit-transform: translateX(0);
     -webkit-animation-name: slide-in-right;
 }
-.box{width:500px;height:370px;position:relative;overflow:hidden;}
+.box{width:500px;height:370px;position:relative;overflow:hidden;border:3px solid #666;}
 a{position:absolute;}
 </style>
 
 <div id="box" class="box">
     <a href="/" class="out"><img src="http://dummyimage.com/500x370/ccc/f00" /></a>
-    <a href="/" class="out"><img src="http://dummyimage.com/500x370/ccc/0f0" /></a>
+    <a href="/" class="out"><img src="http://dummyimage.com/500x370/999/0f0" /></a>
     <a href="/" class="out"><img src="http://dummyimage.com/500x370/ccc/00f" /></a>
-    <a href="/" class="out"><img src="http://dummyimage.com/500x370/ccc/ff0" /></a>
+    <a href="/" class="out"><img src="http://dummyimage.com/500x370/999/ff0" /></a>
 </div>
 
 <script type="text/javascript">
@@ -56,7 +58,7 @@ function nextCard(m){
     }
     a[m].className='in';
 }
-box.onclick=function(){
+bt.onclick=box.onclick=function(){
     num++;
     if(num>=4){
         num=0;
@@ -68,7 +70,7 @@ box.click();
 </script>
 
 
-<p>{{ page.date | date_to_string }}</p>
+<p>日期：{{ page.date | date_to_string }}</p>
 
 </body>
 </html>
