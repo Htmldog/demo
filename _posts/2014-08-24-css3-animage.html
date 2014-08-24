@@ -1,0 +1,130 @@
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en"
+"http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=gb2312"/>
+<title> new document </title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+</head>
+
+<body>
+
+
+<style>
+.poa{position:absolute;}
+.stage{-webkit-perspective:800px;}
+.wrap{margin:50px;width:200px;height:100px;-webkit-transform-style:preserve-3d;}
+.pic1{-webkit-transform:rotateY(120deg) translateZ(57px);}
+.pic2{-webkit-transform:rotateY(240deg) translateZ(57px);}
+.pic3{-webkit-transform:rotateY(360deg) translateZ(57px);}
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+0%   {-webkit-transform:rotateY(60deg);}
+20%  {-webkit-transform:rotateY(120deg);}
+40%  {-webkit-transform:rotateY(180deg);}
+60%  {-webkit-transform:rotateY(240deg);}
+80%  {-webkit-transform:rotateY(300deg);}
+100% {-webkit-transform:rotateY(360deg);}
+}
+.wrap{
+-webkit-animation-name: myfirst;
+-webkit-animation-duration:5s;
+-webkit-animation-timing-function: linear;
+-webkit-animation-delay:0s;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-direction: alternate;
+-webkit-animation-play-state: running;
+}
+.wrap:hover{
+	-webkit-animation-play-state: paused;
+}
+</style>
+
+<div class="stage">
+	<div class="wrap">
+		<a href="http://www.baidu.com" target="_blank" class="" title="">
+			<img src="http://dummyimage.com/200x100/000/f00&text=Baidu" class="pic1 poa" alt=""/>
+		</a>
+		<a href="http://www.sina.com.cn/" target="_blank" class="" title="">
+			<img src="http://dummyimage.com/200x100/666/eee&text=Sina" class="pic2 poa" alt=""/>
+		</a>
+		<a href="http://www.1688.com/" target="_blank" class="" title="">
+			<img src="http://dummyimage.com/200x100/999&text=Alibaba" class="pic3 poa" alt=""/>
+		</a>
+	</div>
+</div>
+
+
+<style>
+.por{position:relative;}
+.poa{position:absolute;}
+.stage-a{-webkit-perspective:800px;-webkit-perspective-origin:50% -50%;}
+.wrap-a{width:200px;height:200px;-webkit-transform-style:preserve-3d;margin:100px;}
+
+.pic1a{-webkit-transform:rotateY(0deg) rotateX(0deg) translateZ(98px);}
+.pic2a{-webkit-transform:rotateY(90deg) translateZ(98px);}
+.pic3a{-webkit-transform:rotateY(270deg) translateZ(98px);}
+.pic4a{-webkit-transform:rotateY(180deg) translateZ(98px);}
+.pic5a{-webkit-transform:rotateY(180deg) rotateX(90deg) translateZ(98px);}
+.pic6a{-webkit-transform:rotateY(180deg) rotateX(90deg) translateZ(-98px);}
+/**/
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+0%   {-webkit-transform:rotateY(0deg);}
+50%  {-webkit-transform:rotateY(180deg) rotateX(180deg);}
+100%  {-webkit-transform:rotateY(360deg) rotateX(360deg);}
+}
+.wrap-a{
+-webkit-animation-name: myfirst;
+-webkit-animation-duration:15s;
+-webkit-animation-timing-function: linear;
+-webkit-animation-delay:0s;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-direction: alternate;
+-webkit-animation-play-state: running;
+}
+
+
+</style>
+
+<div class="stage-a">
+	<div class="wrap-a">
+	<img src="http://dummyimage.com/200x200/666/eee&text=1" width="200" height="200" class="pic1a poa" alt=""/>
+	<img src="http://dummyimage.com/200x200/999/f00&text=2" width="200" height="200" class="pic2a poa" alt=""/>
+	<img src="http://dummyimage.com/200x200/000/eee&text=3" width="200" height="200" class="pic3a poa" alt=""/>
+	<img src="http://dummyimage.com/200x200/666/0f0&text=4" width="200" height="200" class="pic4a poa" alt=""/>
+	<img src="http://dummyimage.com/200x200/333/0f0&text=5" width="200" height="200" class="pic5a poa" alt=""/>
+	<img src="http://dummyimage.com/200x200/333/eee&text=6" width="200" height="200" class="pic6a poa" alt=""/>
+	</div>
+</div>
+
+
+<style>
+.poa{position:absolute;}
+.por{position:relative;}
+img{cursor:pointer;}
+.stage-b{-webkit-perspective:800px;-webkit-perspective-origin:50% -50%;position:absolute;top:157px;left:393px;}
+.wrap-b{
+	width:200px;height:200px;
+	-webkit-transform-style:preserve-3d;
+	-webkit-transition:-webkit-transform 2s;
+}
+.pic1-b{-webkit-transform:rotateY(120deg) translateZ(80px);}
+.pic2-b{-webkit-transform:rotateY(240deg) translateZ(80px);}
+.pic3-b{-webkit-transform:rotateY(360deg) translateZ(80px);}
+.wrap-b:hover{-webkit-transform:rotateY(120deg);}
+
+
+</style>
+
+<div class="stage-b">
+	<div class="wrap-b" style="">
+		<img src="http://dummyimage.com/200x100/333/eee&text=Touch me!" class="poa pic1-b" alt=""/>
+		<img src="http://dummyimage.com/200x100/666/eee&text=Touch me!" class="poa pic2-b" alt=""/>
+		<img src="http://dummyimage.com/200x100/999/eee&text=Touch me!" class="poa pic3-b" alt=""/>
+	</div>
+</div>
+
+</body>
+</html>
