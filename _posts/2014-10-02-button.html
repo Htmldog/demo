@@ -1,0 +1,38 @@
+---
+layout: default
+title: CSS3按钮
+---
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<h2>{{ page.title }}</h2>
+
+
+<style>
+.button {
+	width: 140px;
+	line-height: 38px;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 5px;
+	margin: 0 20px 20px 0;
+}
+
+.gray {
+	color: #8c96a0;
+	text-shadow: 1px 1px 1px #fff;
+	border: 1px solid #dce1e6;
+	box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+	background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+}
+.gray:hover {
+	background: -webkit-linear-gradient(top,#fefefe,#ebeced);
+}
+
+</style>
+
+<button type="button" class="button gray">BUY NOW</button>
+
+
+
+
+<p>日期：{{ page.date | date_to_string }}</p>
+
