@@ -104,7 +104,7 @@ var slider = {
         end:function(event){
             var duration = +new Date - startPos.time;    //滑动的持续时间
             if(isScrolling === 0){    //当为水平滚动时
-                this.icon[this.index].className = '';
+                // this.icon[this.index].className = '';
                 if(Number(duration) > 10){     
                     //判断是左移还是右移，当偏移量大于10时执行
                     if(endPos.x > 10){
